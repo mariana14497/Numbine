@@ -47,6 +47,7 @@ import { NumbineSelectBoxComponent } from './demo/dell/generalComponents/numbine
 import { NumbineButtonAlertComponent } from './demo/dell/generalComponents/numbine-button-alert/numbine-button-alert.component';
 import { NumbineCheckBoxComponent } from './demo/dell/generalComponents/numbine-check-box/numbine-check-box.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
