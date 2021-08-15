@@ -49,6 +49,7 @@ import { NumbineCheckBoxComponent } from './demo/dell/generalComponents/numbine-
 
 import { DashboardContainerComponent } from './demo/dell/generalScreens/dashboard-container/dashboard-container.component';
 import { CardModule } from './theme/shared/components';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -101,6 +102,7 @@ import { CardModule } from './theme/shared/components';
     NgbDropdownModule,
     NgbTooltipModule,
     NgbButtonsModule,
+    HttpClientModule,
     NgbTabsetModule
   ],
   providers: [NavigationItem],
