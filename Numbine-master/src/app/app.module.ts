@@ -41,6 +41,11 @@ import { NumbineAlertComponent } from './demo/dell/generalComponents/numbine-ale
 import { LogInComponent } from './demo/dell/generalScreens/log-in/log-in.component';
 import { ProductSelectorComponent } from './demo/dell/configurator/components/product-selector/product-selector.component';
 import { ProductReleaseMappingComponent } from './demo/dell/configurator/pages/product-release-mapping/product-release-mapping.component';
+import { NewParamMappingComponent } from './demo/dell/configurator/pages/new-param-mapping/new-param-mapping.component';
+import { TestConfigurationComponent } from './demo/dell/configurator/pages/test-configuration/test-configuration.component';
+import { NumbineSelectBoxComponent } from './demo/dell/generalComponents/numbine-select-box/numbine-select-box.component';
+import { NumbineButtonAlertComponent } from './demo/dell/generalComponents/numbine-button-alert/numbine-button-alert.component';
+import { NumbineCheckBoxComponent } from './demo/dell/generalComponents/numbine-check-box/numbine-check-box.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +80,14 @@ import { ProductReleaseMappingComponent } from './demo/dell/configurator/pages/p
     ProductSelectorComponent,
     LogInComponent,
     ProductReleaseMappingComponent,
+
+    NewParamMappingComponent,
+
+    TestConfigurationComponent,
+    NumbineSelectBoxComponent,
+    NumbineButtonAlertComponent,
+    NumbineCheckBoxComponent,
+
   ],
   imports: [
     BrowserModule,
