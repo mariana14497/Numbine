@@ -47,8 +47,6 @@ import { NumbineSelectBoxComponent } from './demo/dell/generalComponents/numbine
 import { NumbineButtonAlertComponent } from './demo/dell/generalComponents/numbine-button-alert/numbine-button-alert.component';
 import { NumbineCheckBoxComponent } from './demo/dell/generalComponents/numbine-check-box/numbine-check-box.component';
 
-import { DashboardContainerComponent } from './demo/dell/generalScreens/dashboard-container/dashboard-container.component';
-import { CardModule } from './theme/shared/components';
 
 @NgModule({
   declarations: [
@@ -91,7 +89,6 @@ import { CardModule } from './theme/shared/components';
     NumbineButtonAlertComponent,
     NumbineCheckBoxComponent,
 
-    LogInComponent
   ],
   imports: [
     BrowserModule,

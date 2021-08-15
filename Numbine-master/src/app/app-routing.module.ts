@@ -10,12 +10,8 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'dell/dashboard',
+        redirectTo: 'dashboard/default',
         pathMatch: 'full'
-      },
-      {
-        path: 'dell',
-        loadChildren: () => import('./demo/dell/dell.module').then(module => module.DellModule)
       },
       {
         path: 'dashboard',
