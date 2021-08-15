@@ -1,7 +1,7 @@
 # Numbine
 An Application for Optimized Configuration Testing
 
-#Purpose
+# Purpose
 Dell products have complex configurations that include many parameters and values, there are several kinds of restrictions on those parameters and their values. This complexity is manifested in complex testing environments and thousands of configuration options that require testing. The goals of this system is to:
 
 Document the configuration options for each product release
