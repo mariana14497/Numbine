@@ -1,22 +1,9 @@
-
 <app-numbine-navbar class="navbar pcoded-header navbar-expand-lg navbar-light " (onNavCollapse)="this.navCollapsed = !this.navCollapsed;" (onNavHeaderMobCollapse)="navMobClick()"></app-numbine-navbar>
-<div class="col-sm-12">
-    <app-card cardTitle="Different line chart" [options]="false">
-      <app-apex-chart chartID="line-chart-3-cac" [chartConfig]="this.numbineChartData.line3CAC"></app-apex-chart>
-    </app-card>
-</div>
-<div class="row">
-    <div class="col-md-6">
-        <app-card cardTitle="Roles report" [options]="false">
-          <app-apex-chart chartID="pie-chart-1-cac" [chartConfig]="this.numbineChartData.pie1CAC"></app-apex-chart>
-        </app-card>
-    </div>
-    <div class="col-md-6">
-        <app-card cardTitle="Activity report" [options]="false">
-          <app-apex-chart chartID="bar-chart-2-cac" [chartConfig]="this.numbineChartData.bar2CAC"></app-apex-chart>
-        </app-card>
-    </div>
-</div>
+
+<app-numbine-charts type = "line"></app-numbine-charts>
+<app-numbine-charts type = "bar"></app-numbine-charts>
+<app-numbine-charts type = "pie"></app-numbine-charts>
+<app-numbine-alert buttonName="buttonName" alertTitle="Alert Title" alertText="Alert Text" successMassege="successMassege" failMassege="failMassege" fileName="fileName" fileType="xml"></app-numbine-alert>
 <div>
     <app-card>
         <h1>Angular Overview File</h1>
