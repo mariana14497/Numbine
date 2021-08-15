@@ -38,6 +38,7 @@ import { NumbineNavCollapseComponent } from './demo/dell/generalComponents/numbi
 import { NumbineNavItemComponent } from './demo/dell/generalComponents/numbineNavigation/numbine-nav-item/numbine-nav-item.component';
 import { NumbineChartsComponent } from './demo/dell/generalComponents/numbine-charts/numbine-charts.component';
 import { NumbineAlertComponent } from './demo/dell/generalComponents/numbine-alert/numbine-alert.component';
+import { ProductSelectorComponent } from './demo/dell/configurator/product-selector/product-selector.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { NumbineAlertComponent } from './demo/dell/generalComponents/numbine-ale
     NumbineNavItemComponent,
     NumbineChartsComponent,
     NumbineAlertComponent,
+    ProductSelectorComponent,
   ],
   imports: [
     BrowserModule,
