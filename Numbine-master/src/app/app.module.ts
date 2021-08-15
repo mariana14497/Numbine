@@ -42,6 +42,7 @@ import { LogInComponent } from './demo/dell/generalScreens/log-in/log-in.compone
 import { ProductSelectorComponent } from './demo/dell/configurator/components/product-selector/product-selector.component';
 import { ProductReleaseMappingComponent } from './demo/dell/configurator/pages/product-release-mapping/product-release-mapping.component';
 import { NewParamMappingComponent } from './demo/dell/configurator/pages/new-param-mapping/new-param-mapping.component';
+import { TestConfigurationComponent } from './demo/dell/configurator/pages/test-configuration/test-configuration.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,11 @@ import { NewParamMappingComponent } from './demo/dell/configurator/pages/new-par
     ProductSelectorComponent,
     LogInComponent,
     ProductReleaseMappingComponent,
+
     NewParamMappingComponent,
+
+    TestConfigurationComponent,
+
   ],
   imports: [
     BrowserModule,
