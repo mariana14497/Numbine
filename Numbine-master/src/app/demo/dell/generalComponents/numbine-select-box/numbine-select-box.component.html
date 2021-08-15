@@ -1,5 +1,5 @@
-<div class="col-sm-12 col-xl-3 m-b-30"  >
-    <h5 class="sub-title"   >{{title}}  </h5><hr/>
+<div class="col-sm-12 col-xl-3 m-b-30">
+    <h5 class="sub-title"   >{{title}}  </h5>
     <select name="select" class="form-control form-control-default" [id]="id" (change)="selectOption($event.target.value)"  [(ngModel)]="selected" >       
       <option *ngFor="let item of data" [value]="item.id" >{{item.text}}</option>
     </select>
