@@ -38,8 +38,8 @@ import { NumbineNavCollapseComponent } from './demo/dell/generalComponents/numbi
 import { NumbineNavItemComponent } from './demo/dell/generalComponents/numbineNavigation/numbine-nav-item/numbine-nav-item.component';
 import { NumbineChartsComponent } from './demo/dell/generalComponents/numbine-charts/numbine-charts.component';
 import { NumbineAlertComponent } from './demo/dell/generalComponents/numbine-alert/numbine-alert.component';
-import { ProductSelectorComponent } from './demo/dell/configurator/product-selector/product-selector.component';
 import { LogInComponent } from './demo/dell/generalScreens/log-in/log-in.component';
+import { ProductSelectorComponent } from './demo/dell/configurator/components/product-selector/product-selector.component';
 
 @NgModule({
   declarations: [
