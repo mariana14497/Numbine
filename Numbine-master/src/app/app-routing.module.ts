@@ -10,7 +10,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'dell/dashboard',
+        redirectTo: 'dell/admin',
         pathMatch: 'full'
       },
       {
