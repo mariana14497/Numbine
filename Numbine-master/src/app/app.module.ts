@@ -40,6 +40,7 @@ import { NumbineChartsComponent } from './demo/dell/generalComponents/numbine-ch
 import { NumbineAlertComponent } from './demo/dell/generalComponents/numbine-alert/numbine-alert.component';
 import { LogInComponent } from './demo/dell/generalScreens/log-in/log-in.component';
 import { ProductSelectorComponent } from './demo/dell/configurator/components/product-selector/product-selector.component';
+import { TestConfigrationsEditNewComponent } from './demo/dell/configurator/pages/test-configrations-edit-new/test-configrations-edit-new.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { ProductSelectorComponent } from './demo/dell/configurator/components/pr
     NumbineAlertComponent,
     ProductSelectorComponent,
     LogInComponent,
+    TestConfigrationsEditNewComponent,
   ],
   imports: [
     BrowserModule,
