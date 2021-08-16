@@ -42,6 +42,17 @@ import { LogInComponent } from './demo/dell/generalScreens/log-in/log-in.compone
 import { ProductSelectorComponent } from './demo/dell/configurator/components/product-selector/product-selector.component';
 import { TestConfigrationsEditNewComponent } from './demo/dell/configurator/pages/test-configrations-edit-new/test-configrations-edit-new.component';
 
+import { ProductReleaseMappingComponent } from './demo/dell/configurator/pages/product-release-mapping/product-release-mapping.component';
+import { NewParamMappingComponent } from './demo/dell/configurator/pages/new-param-mapping/new-param-mapping.component';
+import { TestConfigurationComponent } from './demo/dell/configurator/pages/test-configuration/test-configuration.component';
+import { NumbineSelectBoxComponent } from './demo/dell/generalComponents/numbine-select-box/numbine-select-box.component';
+import { NumbineButtonAlertComponent } from './demo/dell/generalComponents/numbine-button-alert/numbine-button-alert.component';
+import { NumbineCheckBoxComponent } from './demo/dell/generalComponents/numbine-check-box/numbine-check-box.component';
+
+import { DashboardContainerComponent } from './demo/dell/generalScreens/dashboard-container/dashboard-container.component';
+import { CardModule } from './theme/shared/components';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +85,18 @@ import { TestConfigrationsEditNewComponent } from './demo/dell/configurator/page
     NumbineAlertComponent,
     ProductSelectorComponent,
     LogInComponent,
+
     TestConfigrationsEditNewComponent,
+    ProductReleaseMappingComponent,
+
+    NewParamMappingComponent,
+
+    TestConfigurationComponent,
+    NumbineSelectBoxComponent,
+    NumbineButtonAlertComponent,
+    NumbineCheckBoxComponent,
+
+    LogInComponent
   ],
   imports: [
     BrowserModule,
@@ -84,6 +106,7 @@ import { TestConfigrationsEditNewComponent } from './demo/dell/configurator/page
     NgbDropdownModule,
     NgbTooltipModule,
     NgbButtonsModule,
+    HttpClientModule,
     NgbTabsetModule
   ],
   providers: [NavigationItem],
