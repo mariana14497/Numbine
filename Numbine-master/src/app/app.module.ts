@@ -47,9 +47,7 @@ import { NumbineSelectBoxComponent } from './demo/dell/general-components/numbin
 import { NumbineButtonAlertComponent } from './demo/dell/general-components/numbine-button-alert/numbine-button-alert.component';
 import { NumbineCheckBoxComponent } from './demo/dell/general-components/numbine-check-box/numbine-check-box.component';
 import { HttpClientModule } from '@angular/common/http';
-import { NumbineTableComponent } from './demo/dell/generalComponents/numbine-table/numbine-table.component';
-import { DellModule } from './demo/dell/dell.module';
-
+import { NumbineTableComponent } from './demo/dell/general-components/numbine-table/numbine-table.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -103,7 +101,6 @@ import { DellModule } from './demo/dell/dell.module';
     NgbTooltipModule,
     NgbButtonsModule,
     HttpClientModule,
-    DellModule,
     NgbTabsetModule
   ],
   providers: [NavigationItem],

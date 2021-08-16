@@ -12,7 +12,6 @@ export class NumbineTableComponent implements OnInit {
   dataTable: DataTable = new DataTable();
   constructor() {
   }
-
   ngOnInit(): void {
   }
 }
