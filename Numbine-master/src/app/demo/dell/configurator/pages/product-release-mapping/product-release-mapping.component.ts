@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/demo/dell/models/Product'
 import { ProductService } from 'src/app/demo/dell/services/ProductService/product.service';
+import { DataTable } from '../../../models/DataTable';
+
 @Component({
   selector: 'app-product-release-mapping',
   templateUrl: './product-release-mapping.component.html',
@@ -8,11 +10,18 @@ import { ProductService } from 'src/app/demo/dell/services/ProductService/produc
 })
 export class ProductReleaseMappingComponent implements OnInit {
   
+  title = ['Param Name(^v)','Actions'];
+  rows = [[1,'edit,delete'],[3,'edit,delete']];
+  dataTable = new DataTable();
+  
   public products : Product[] = [];
 
   constructor(private productService : ProductService) { }
 
   ngOnInit(): void {
+    this.dataTable.rows=this.rows;
+    this.dataTable.titles=this.title;
+    
     let obs = this.productService.getDummyProducts();
     obs.subscribe(products => {
       this.products = products;

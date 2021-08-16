@@ -12,11 +12,10 @@ export class NumbineTableComponent implements OnInit {
   dataTable: DataTable = new DataTable();
   constructor() {
   }
-
   ngOnInit(): void {
   }
 }
-export class DataTable{
+class DataTable{
   public titles: String[]
   public rows: any[][]
 }

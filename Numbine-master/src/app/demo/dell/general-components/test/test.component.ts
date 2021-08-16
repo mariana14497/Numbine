@@ -3,6 +3,7 @@ import {ButtonClass} from 'src/app/demo/enums/myenum.enum'
 import { NextConfig } from '../../../../app-config';
 import {NumbineChartData} from 'src/app/app/fack-db/numbine-chart-data';
 import { Location } from '@angular/common';
+import { DataTable } from '../../models/DataTable';
 
 @Component({
   selector: 'app-test',
@@ -11,6 +12,9 @@ import { Location } from '@angular/common';
 })
 export class TestComponent implements OnInit {
 
+  title = ['aa','bb'];
+  rows = [[1,2],[3,4]];
+  dataTable = new DataTable();
   heloo(event: KeyboardEvent){
     this.helo =(event.target as HTMLInputElement).value ;
     
@@ -55,6 +59,9 @@ export class TestComponent implements OnInit {
         (document.querySelector('#nav-ps-flat-able') as HTMLElement).style.maxHeight = '100%'; // 100% amit
       }, 500);
     }
+    this.dataTable.titles=this.title;
+    this.dataTable.rows=this.rows;
+
   }
 
   navMobClick() {
