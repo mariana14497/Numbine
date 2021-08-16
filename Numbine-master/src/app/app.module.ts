@@ -47,9 +47,15 @@ import { NumbineSelectBoxComponent } from './demo/dell/general-components/numbin
 import { NumbineButtonAlertComponent } from './demo/dell/general-components/numbine-button-alert/numbine-button-alert.component';
 import { NumbineCheckBoxComponent } from './demo/dell/general-components/numbine-check-box/numbine-check-box.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReleasesComponent } from './demo/dell/configurator/pages/releases/releases.component';
+import { NewReleaseComponent } from './demo/dell/configurator/pages/new-release/new-release.component';
+import { UpdateReleaseComponent } from './demo/dell/configurator/pages/update-release/update-release.component';
 
 @NgModule({
   declarations: [
+    NewReleaseComponent,
+    UpdateReleaseComponent,
+    ReleasesComponent,
     AppComponent,
     AdminComponent,
     AuthComponent,
@@ -81,9 +87,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProductSelectorComponent,
     LogInComponent,
     ProductReleaseMappingComponent,
-
     NewParamMappingComponent,
-
     TestConfigurationComponent,
     NumbineSelectBoxComponent,
     NumbineButtonAlertComponent,
