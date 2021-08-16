@@ -50,7 +50,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReleasesComponent } from './demo/dell/configurator/pages/releases/releases.component';
 import { NewReleaseComponent } from './demo/dell/configurator/pages/new-release/new-release.component';
 import { UpdateReleaseComponent } from './demo/dell/configurator/pages/update-release/update-release.component';
-import { NumbineTableComponent } from './demo/dell/general-components/numbine-table/numbine-table.component'
+import { NumbineTableComponent } from './demo/dell/general-components/numbine-table/numbine-table.component';
+import { AppLoadingComponent } from './demo/dell/general-components/app-loading/app-loading.component'
 @NgModule({
   declarations: [
     NewReleaseComponent,
@@ -94,7 +95,9 @@ import { NumbineTableComponent } from './demo/dell/general-components/numbine-ta
     NumbineButtonAlertComponent,
     NumbineCheckBoxComponent,
 
-    LogInComponent
+    LogInComponent,
+
+    AppLoadingComponent
   ],
   imports: [
     BrowserModule,
