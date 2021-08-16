@@ -6,12 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test-configrations-edit-new.component.scss']
 })
 export class TestConfigrationsEditNewComponent implements OnInit {
-
-  public name: string;
+public title:string[];
+public row:number[][];
+public name: string;
   constructor() { }
 
   ngOnInit(): void {
     this.name="save";
+    // this.table.row=this.row;
   }
 
 }
