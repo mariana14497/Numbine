@@ -1,3 +1,5 @@
+import { NumbineAdminComponent } from './demo/dell/Admin/components/numbine-admin/numbine-admin.component';
+import { AccessPageComponent } from './demo/dell/Admin/pages/access-page/access-page.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -46,7 +48,6 @@ import { TestConfigurationComponent } from './demo/dell/configurator/pages/test-
 import { NumbineSelectBoxComponent } from './demo/dell/generalComponents/numbine-select-box/numbine-select-box.component';
 import { NumbineButtonAlertComponent } from './demo/dell/generalComponents/numbine-button-alert/numbine-button-alert.component';
 import { NumbineCheckBoxComponent } from './demo/dell/generalComponents/numbine-check-box/numbine-check-box.component';
-
 import { DashboardContainerComponent } from './demo/dell/generalScreens/dashboard-container/dashboard-container.component';
 import { CardModule } from './theme/shared/components';
 import { HttpClientModule } from '@angular/common/http';
@@ -84,15 +85,14 @@ import { HttpClientModule } from '@angular/common/http';
     ProductSelectorComponent,
     LogInComponent,
     ProductReleaseMappingComponent,
-
     NewParamMappingComponent,
-
+    AccessPageComponent,
     TestConfigurationComponent,
     NumbineSelectBoxComponent,
     NumbineButtonAlertComponent,
     NumbineCheckBoxComponent,
-
-    LogInComponent
+    LogInComponent,
+    NumbineAdminComponent
   ],
   imports: [
     BrowserModule,
