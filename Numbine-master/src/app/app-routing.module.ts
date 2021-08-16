@@ -14,10 +14,6 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: 'dell',
-        loadChildren: () => import('./demo/dell/dell.module').then(module => module.DellModule)
-      },
-      {
         path: 'dashboard',
         loadChildren: () => import('./demo/dashboard/dashboard.module').then(module => module.DashboardModule)
       },

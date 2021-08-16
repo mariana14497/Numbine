@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { Product } from 'src/app/demo/dell/models/Product'
-import { NumbineSelectBoxComponent } from '../../../generalComponents/numbine-select-box/numbine-select-box.component';
+import { NumbineSelectBoxComponent } from '../../../general-components/numbine-select-box/numbine-select-box.component';
 import { SelectBoxItem } from '../../../models/SelectBoxItem';
 @Component({
   selector: 'app-product-selector',

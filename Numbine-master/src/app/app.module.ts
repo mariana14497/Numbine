@@ -24,31 +24,28 @@ import { ToggleFullScreenDirective } from './theme/shared/full-screen/toggle-ful
 /* Menu Items */
 import { NavigationItem } from './theme/layout/admin/navigation/navigation';
 import { NgbButtonsModule, NgbDropdownModule, NgbTabsetModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
-import { ButtonComponent } from './demo/dell/generalComponents/button/button.component';
-import { TestComponent } from './demo/dell/generalComponents/test/test.component';
-import { InputComponent } from './demo/dell/generalComponents/input/input.component';
-import { IconComponent } from './demo/dell/generalComponents/icon/icon.component';
-import { NumbineNavLeftComponent } from './demo/dell/generalComponents/numbineNavbar/numbine-nav-left/numbine-nav-left.component';
-import { NumbineNavRightComponent } from './demo/dell/generalComponents/numbineNavbar/numbine-nav-right/numbine-nav-right.component';
-import { NumbineNavbarComponent } from './demo/dell/generalComponents/numbine-navbar/numbine-navbar.component';
-import { NumbineNavigationComponent } from './demo/dell/generalComponents/numbine-navigation/numbine-navigation.component';
-import { NumbineNavContentComponent } from './demo/dell/generalComponents/numbineNavigation/numbine-nav-content/numbine-nav-content.component';
-import { NumbineNavGroupComponent } from './demo/dell/generalComponents/numbineNavigation/numbineNavigation/numbine-nav-group/numbine-nav-group.component';
-import { NumbineNavCollapseComponent } from './demo/dell/generalComponents/numbineNavigation/numbine-nav-collapse/numbine-nav-collapse.component';
-import { NumbineNavItemComponent } from './demo/dell/generalComponents/numbineNavigation/numbine-nav-item/numbine-nav-item.component';
-import { NumbineChartsComponent } from './demo/dell/generalComponents/numbine-charts/numbine-charts.component';
-import { NumbineAlertComponent } from './demo/dell/generalComponents/numbine-alert/numbine-alert.component';
+import { ButtonComponent } from './demo/dell/general-components/button/button.component';
+import { TestComponent } from './demo/dell/general-components/test/test.component';
+import { InputComponent } from './demo/dell/general-components/input/input.component';
+import { IconComponent } from './demo/dell/general-components/icon/icon.component';
+import { NumbineNavLeftComponent } from './demo/dell/general-components/numbineNavbar/numbine-nav-left/numbine-nav-left.component';
+import { NumbineNavRightComponent } from './demo/dell/general-components/numbineNavbar/numbine-nav-right/numbine-nav-right.component';
+import { NumbineNavbarComponent } from './demo/dell/general-components/numbine-navbar/numbine-navbar.component';
+import { NumbineNavigationComponent } from './demo/dell/general-components/numbine-navigation/numbine-navigation.component';
+import { NumbineNavContentComponent } from './demo/dell/general-components/numbineNavigation/numbine-nav-content/numbine-nav-content.component';
+import { NumbineNavGroupComponent } from './demo/dell/general-components/numbineNavigation/numbineNavigation/numbine-nav-group/numbine-nav-group.component';
+import { NumbineNavCollapseComponent } from './demo/dell/general-components/numbineNavigation/numbine-nav-collapse/numbine-nav-collapse.component';
+import { NumbineNavItemComponent } from './demo/dell/general-components/numbineNavigation/numbine-nav-item/numbine-nav-item.component';
+import { NumbineChartsComponent } from './demo/dell/general-components/numbine-charts/numbine-charts.component';
+import { NumbineAlertComponent } from './demo/dell/general-components/numbine-alert/numbine-alert.component';
 import { LogInComponent } from './demo/dell/generalScreens/log-in/log-in.component';
 import { ProductSelectorComponent } from './demo/dell/configurator/components/product-selector/product-selector.component';
 import { ProductReleaseMappingComponent } from './demo/dell/configurator/pages/product-release-mapping/product-release-mapping.component';
 import { NewParamMappingComponent } from './demo/dell/configurator/pages/new-param-mapping/new-param-mapping.component';
 import { TestConfigurationComponent } from './demo/dell/configurator/pages/test-configuration/test-configuration.component';
-import { NumbineSelectBoxComponent } from './demo/dell/generalComponents/numbine-select-box/numbine-select-box.component';
-import { NumbineButtonAlertComponent } from './demo/dell/generalComponents/numbine-button-alert/numbine-button-alert.component';
-import { NumbineCheckBoxComponent } from './demo/dell/generalComponents/numbine-check-box/numbine-check-box.component';
-
-import { DashboardContainerComponent } from './demo/dell/generalScreens/dashboard-container/dashboard-container.component';
-import { CardModule } from './theme/shared/components';
+import { NumbineSelectBoxComponent } from './demo/dell/general-components/numbine-select-box/numbine-select-box.component';
+import { NumbineButtonAlertComponent } from './demo/dell/general-components/numbine-button-alert/numbine-button-alert.component';
+import { NumbineCheckBoxComponent } from './demo/dell/general-components/numbine-check-box/numbine-check-box.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
