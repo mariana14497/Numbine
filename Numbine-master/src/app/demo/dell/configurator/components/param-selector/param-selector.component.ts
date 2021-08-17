@@ -1,6 +1,6 @@
 // import { Component, OnInit } from '@angular/core';
 import { Component, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
-import { EventEmitter } from 'events';
+import { EventEmitter } from '@angular/core';
 import { Parameter } from 'src/app/demo/dell/models/Parameter'
 import { NumbineSelectBoxComponent } from '../../../general-components/numbine-select-box/numbine-select-box.component';
 import { SelectBoxItem } from '../../../models/SelectBoxItem';
@@ -51,13 +51,10 @@ export class ParamSelectorComponent implements OnInit, OnChanges {
   {
     this.selectedParameter = this.paramList[index];
     this.onSelectionChanged.emit(this.selectedParameter);
-    console.log(this.selectedParameter);
   }
-
+  
   ngOnInit(): void {
   }
 
 }
-
-// <
 
