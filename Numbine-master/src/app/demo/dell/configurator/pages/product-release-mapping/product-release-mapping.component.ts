@@ -11,7 +11,7 @@ import { DataTable } from '../../../models/DataTable';
 export class ProductReleaseMappingComponent implements OnInit {
   
   title = ['Param Name(^v)','Actions'];
-  rows = [[1,'edit,delete'],[3,'edit,delete']];
+  rows = [[1,'"<app-icon type="edit"></app-icon>"'],[3,'<app-icon type="edit"></app-icon>']];
   dataTable = new DataTable();
   
   public products : Product[] = [];

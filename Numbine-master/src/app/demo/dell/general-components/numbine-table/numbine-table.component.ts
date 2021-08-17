@@ -16,6 +16,6 @@ export class NumbineTableComponent implements OnInit {
   }
 }
 class DataTable{
-  public titles: String[]
+  public titles: string[]
   public rows: any[][]
 }
