@@ -13,7 +13,8 @@ export class NumbineSelectBoxComponent implements OnInit {
   title : String;
   @Input() 
   id : number;
-
+  @Input()
+  cssClass = "col-sm-12 col-xl-3 m-b-30";
   selected: number = 1;
   constructor(){}
 
