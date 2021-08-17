@@ -8,13 +8,13 @@ import { Observable } from 'rxjs';
 export class WebServiseService {
   
 
-  private httpLink ="http://192.168.0.168:8080/";
+  readonly ROOT_URL ="http://192.168.0.168:8080/";
 
   constructor(private httpClient: HttpClient) {
   }
 
   public  callService<T>(endPointURL:String): Observable<T> {
-    return this.httpClient.get<T>(this.httpLink + endPointURL);
+    return this.httpClient.get<T>(this.ROOT_URL + endPointURL);
   }
 
 }
