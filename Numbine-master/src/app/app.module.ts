@@ -53,7 +53,8 @@ import { UpdateReleaseComponent } from './demo/dell/configurator/pages/update-re
 import { NumbineTableComponent } from './demo/dell/general-components/numbine-table/numbine-table.component';
 import { AppLoadingComponent } from './demo/dell/general-components/app-loading/app-loading.component';
 import { NumbineActionsTableComponent } from './demo/dell/general-components/numbine-actions-table/numbine-actions-table.component'
-import { ForgotPassComponent } from './demo/dell/generalScreens/log-in/forgot-pass/forgot-pass.component'
+import { ForgotPassComponent } from './demo/dell/generalScreens/log-in/forgot-pass/forgot-pass.component';
+import { ParamSelectorComponent } from './demo/dell/configurator/components/param-selector/param-selector.component'
 @NgModule({
   declarations: [
     NewReleaseComponent,
@@ -102,7 +103,8 @@ import { ForgotPassComponent } from './demo/dell/generalScreens/log-in/forgot-pa
     AppLoadingComponent,
 
     NumbineActionsTableComponent,
-      ForgotPassComponent
+      ForgotPassComponent,
+      ParamSelectorComponent
   ],
   imports: [
     BrowserModule,
