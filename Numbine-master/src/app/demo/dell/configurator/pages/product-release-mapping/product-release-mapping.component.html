@@ -1,30 +1,28 @@
-
-    <div class="content" >
-        <app-card >
+<app-card cardTitle="Product Release Mapping">
     <h1 style="text-align: left">Product Release Mapping</h1>
     <br><br>
-    <table style="width: 100%">
+    <table>
         <tr>
             <td colspan="2">
-                <app-product-selector labelText="Product Name:" [productList]="products" (onSelectionChanged)="updateParams($event)">
+                <app-product-selector labelText="Product Name:" [productList]="products"
+                    (onSelectionChanged)="updateParams($event)">
                 </app-product-selector>
             </td>
         </tr>
         <tr>
             <td style="text-align: left; vertical-align: top;">
-                <app-button name ='New Param'></app-button><!--Routing-->
+                <app-button name='New Param'></app-button>
+                <!--Routing-->
             </td>
         </tr>
         <br>
         <tr>
             <td>
-                <app-numbine-actions-table [dataTable] = "dataTable" [trashBool]="trash" [editBool] = "edit"></app-numbine-actions-table>
+                <app-numbine-actions-table [dataTable]="dataTable" [trashBool]="trash" [editBool]="edit">
+                </app-numbine-actions-table>
             </td>
         </tr>
     </table>
-<br><br>
+    <br><br>
 
 </app-card>
-</div>
-
-
