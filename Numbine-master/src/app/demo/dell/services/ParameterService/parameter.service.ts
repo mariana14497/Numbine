@@ -4,14 +4,14 @@ import { Observable } from 'rxjs';
 import { Parameter } from '../../models/Parameter';
 import { Product } from '../../models/Product';
 import { Value } from '../../models/Value';
+import { WebServiseService } from '../WebService/web-service.service';
 @Injectable({
   providedIn: 'root'
 })
 export class ParameterService
 {
-  static getPath = "http://localhost:8081/";
   parameters: Parameter[];
-  constructor(private httpClient: HttpClient)
+  constructor(private webService : WebServiseService) 
   {
     this.generateDummyParams();
   }
@@ -88,7 +88,7 @@ export class ParameterService
   }
   public getParametersAsync(): Observable<Parameter[]>
   {
-    return this.httpClient.get<Parameter[]>(ParameterService.getPath + "Parameter/getAllParameters",);
+    return  this.webService.callService<Parameter[]>("Parameter/getAllParameters",);
    }
   // public deleteParameter(){
 

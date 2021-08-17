@@ -3,13 +3,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from '../../models/Product';
 import { Release } from '../../models/Release';
-
+import { WebServiseService } from '../../services/WebService/web-service.service'
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  static getPath = "http://localhost:8081/";
-  constructor(private httpClient : HttpClient) { }
+  constructor(private webService : WebServiseService) { }
 
   public getDummyProducts() : Observable<Product[]>
   {
@@ -34,7 +33,7 @@ export class ProductService {
   }
   public getProductsAsync() : Observable<Product[]>
   {
-    return this.httpClient.get<Product[]>(ProductService.getPath + "Product/getAllProducts");
+    return this.webService.callService<Product[]>("Product/getAllProducts");
   }
   
 }
