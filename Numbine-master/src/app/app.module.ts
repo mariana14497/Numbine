@@ -1,3 +1,5 @@
+import { NumbineAdminComponent } from './demo/dell/Admin/components/numbine-admin/numbine-admin.component';
+import { AccessPageComponent } from './demo/dell/Admin/pages/access-page/access-page.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -54,7 +56,10 @@ import { NumbineTableComponent } from './demo/dell/general-components/numbine-ta
 import { AppLoadingComponent } from './demo/dell/general-components/app-loading/app-loading.component';
 import { NumbineActionsTableComponent } from './demo/dell/general-components/numbine-actions-table/numbine-actions-table.component'
 import { ForgotPassComponent } from './demo/dell/generalScreens/log-in/forgot-pass/forgot-pass.component';
-import { ParamSelectorComponent } from './demo/dell/configurator/components/param-selector/param-selector.component'
+import { AddUserPageComponent } from './demo/dell/Admin/pages/add-user-page/add-user-page/add-user-page.component'
+import { ParamSelectorComponent } from './demo/dell/configurator/components/param-selector/param-selector.component';
+import { UserConfigGeneratorPageComponent } from './demo/dell/tester/user-config-generator-page/user-config-generator-page.component';
+import { SelectTupleComponent } from './demo/dell/tester/select-tuple/select-tuple.component'
 @NgModule({
   declarations: [
     NewReleaseComponent,
@@ -93,18 +98,21 @@ import { ParamSelectorComponent } from './demo/dell/configurator/components/para
     LogInComponent,
     ProductReleaseMappingComponent,
     NewParamMappingComponent,
+    AccessPageComponent,
     TestConfigurationComponent,
     NumbineSelectBoxComponent,
     NumbineButtonAlertComponent,
     NumbineCheckBoxComponent,
-
+    NumbineAdminComponent,
     LogInComponent,
-
+    AccessPageComponent,
     AppLoadingComponent,
-
     NumbineActionsTableComponent,
-      ForgotPassComponent,
-      ParamSelectorComponent
+    ForgotPassComponent,
+    AddUserPageComponent,
+    ParamSelectorComponent,
+    UserConfigGeneratorPageComponent,
+    SelectTupleComponent
   ],
   imports: [
     BrowserModule,
