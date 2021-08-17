@@ -10,49 +10,66 @@ import { DataTable } from '../../../models/DataTable';
   templateUrl: './product-release-mapping.component.html',
   styleUrls: ['./product-release-mapping.component.scss']
 })
-export class ProductReleaseMappingComponent implements OnInit {
-  trash : Boolean = true;
-  edit : Boolean = true;
-  
-  title = ['Param Name(^v)'];
-  rows = [[1],[3]];
-  dataTable = new DataTable();
-  
-  public products : Product[] = [];
-  public params : Parameter[] = [];
-  constructor(private productService : ProductService, private paramService : ParameterService) { }
+export class ProductReleaseMappingComponent implements OnInit
+{
+  trash: Boolean = true;
+  edit: Boolean = true;
 
-  ngOnInit(): void {
-    this.dataTable.rows=this.rows;
-    this.dataTable.titles=this.title;
-    
+  public products: Product[] = [];
+  public params: Parameter[] = [];
+
+  public title = ['Param Name(^v)'];
+  public rows = [["Temp"], ["Temp"]];
+  public dataTable = new DataTable();
+
+  constructor(private productService: ProductService, private paramService: ParameterService) { }
+
+  ngOnInit(): void
+  {
+    this.dataTable.rows = this.rows;
+    this.dataTable.titles = this.title;
+
     let obsProducts = this.productService.getDummyProducts();
-    obsProducts.subscribe(products => {
+    obsProducts.subscribe(products =>
+    {
       this.products = products;
       // Add loading?
     }, error =>
     {
       alert("Error in loading products, product-release-mapping.component.ts");
+
     });
   }
-  
-  
 
-  updateParams(currentProduct : Product)
+
+
+  updateParams(currentProduct: Product)
   {
-    if(currentProduct != null)
+    if (currentProduct != null)
     {
       let obsParams = this.paramService.getDummyParamsById(currentProduct.id);
-      obsParams.subscribe(params => {
+      obsParams.subscribe(params =>
+      {
         this.params = params;
+        this.updateRows();
         console.log(this.params);
         // Add loading?
       }, error =>
       {
-        alert("Error in loading params, product-release-mapping.component.ts");
+        alert("Error in loading params, product-release-mapping.component.ts " + error);
       });
     }
   }
 
+  updateRows()
+  {
+    this.rows.length = 0;
+    this.params.forEach(element =>
+    {
+      this.rows.push([element.parameterName]);
+    });
+  }
 
 }
+
+

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Parameter } from 'src/app/demo/dell/models/Parameter'
 import { ParameterService } from 'src/app/demo/dell/services/ParameterService/parameter.service';
 import { DataTable } from '../../../models/DataTable';
+import { Value } from '../../../models/Value';
 
 @Component({
   selector: 'app-new-param-mapping',
@@ -15,6 +16,7 @@ export class NewParamMappingComponent implements OnInit {
   dataTable = new DataTable();
   
   public parameters : Parameter[] = [];
+  public currentparameters : Parameter ;
 
   constructor(private parameterService : ParameterService) { }
 
@@ -29,6 +31,33 @@ export class NewParamMappingComponent implements OnInit {
     }, error =>
     {
       alert("Error in loading parameters, new-param-mapping.component.ts");
+    });
+  }
+  updateValues(currentParameter: Parameter)
+  {
+    if (currentParameter != null)
+    {
+      this.currentparameters=currentParameter;
+      this.updateRows();
+      // let obsValues = this.parameterService.getDummyParamsById(currentParameter.id);
+      // obsValues.subscribe(params =>
+      // {
+      //   this.parameters = params;
+      //   this.updateRows();
+      //   // Add loading?
+      // }, error =>
+      // {
+      //   alert("Error in loading params, product-release-mapping.component.ts " + error);
+      // });
+    }
+  }
+  updateRows()
+  {
+    let Values=this.currentparameters.values;
+    this.rows.length = 0;
+    Values.forEach(element =>
+    {
+      this.rows.push([element.name]);
     });
   }
 

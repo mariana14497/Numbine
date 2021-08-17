@@ -13,12 +13,12 @@ export class ParameterService
   parameters: Parameter[];
   constructor(private webService : WebServiseService) 
   {
-    this.generateDummyParams();
+    this.parameters = this.generateDummyParams();
   }
 
 
 
-  private generateDummyParams()
+  private generateDummyParams() : Parameter[]
   {
     const ramValue1 = new Value(1, "4GB");
     const ramValue2 = new Value(2, "8GB");
@@ -33,7 +33,8 @@ export class ParameterService
     const gpuValues: Value[] = [gpuValue1, gpuValue2, gpuValue3, gpuValue4];
     const parameter2 = new Parameter(2, "GPU", "The graphics processing unit.", gpuValues,
       [new Product(2, "B", true, null), new Product(1, "A", true, null)]);
-    this.parameters = [parameter1, parameter2];
+    let parameters = [parameter1, parameter2];
+    return parameters;
   }
 
   public getDummyParameters(): Observable<Parameter[]>
@@ -56,21 +57,22 @@ export class ParameterService
   }
   public getDummyParamsById(productId: number): Observable<Parameter[]>
   {
+    let allParams = this.generateDummyParams();
     let obs = new Observable<Parameter[]>(observer => 
     {
       setTimeout(() =>
       {
-        let paramsById: Parameter[];
+        let paramsById: Parameter[] = [];
         try
         {
-          this.parameters.forEach(element =>
+          allParams.forEach(element =>
           {
             element.products.forEach(product =>
             {
-              console.log("product=" + product.id + " - Id=" + productId);
+              // console.log("product=" + product.id + " - Id=" + productId);
               if (product.id == productId)
               {
-                console.log("Match, added " + product.toString());
+                // console.log("Match, added " + product.toString());
                 paramsById.push(element);
               }
             });
@@ -80,7 +82,7 @@ export class ParameterService
         }
         catch (error)
         {
-
+          observer.error(error);
         }
       }, 500);
     });
@@ -90,11 +92,9 @@ export class ParameterService
   {
     return  this.webService.callService<Parameter[]>("Parameter/getAllParameters",);
    }
-  // public deleteParameter(){
-
-  //   const deleteParamter=   ParameterService.getPath+"/deleteParam/deleteParam";
-  //   return this.httpClient.delete(deleteParamter);
-    
+  //  public deleteParameter(id:number): boolean
+  //  {
+  //    return  this.webService.callService<boolean>("Parameter/deleteParameter$paramId="+id,);
   //   }
     
 
