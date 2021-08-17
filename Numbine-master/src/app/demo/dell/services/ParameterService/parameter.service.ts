@@ -92,11 +92,9 @@ export class ParameterService
   {
     return  this.webService.callService<Parameter[]>("Parameter/getAllParameters",);
    }
-  // public deleteParameter(){
-
-  //   const deleteParamter=   ParameterService.getPath+"/deleteParam/deleteParam";
-  //   return this.httpClient.delete(deleteParamter);
-    
+  //  public deleteParameter(id:number): boolean
+  //  {
+  //    return  this.webService.callService<boolean>("Parameter/deleteParameter$paramId="+id,);
   //   }
     
 

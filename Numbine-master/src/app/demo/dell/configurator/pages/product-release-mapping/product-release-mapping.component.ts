@@ -63,7 +63,6 @@ export class ProductReleaseMappingComponent implements OnInit
 
   updateRows()
   {
-    let column: string[] = [];
     this.rows.length = 0;
     this.params.forEach(element =>
     {
