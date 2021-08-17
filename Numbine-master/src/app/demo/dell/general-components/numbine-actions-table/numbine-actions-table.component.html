@@ -5,28 +5,34 @@
                 <thead>
                     <tr>
                         <th *ngFor="let title of dataTable.titles">{{title}}</th>
-                        <th>Actions</th>
+                        <div *ngIf=" editBool == true || trashBool == true; then actionsThenBlock"></div>
+                        <ng-template #actionsThenBlock>
+                            <th>Actions</th>
+                        </ng-template>
                     </tr>
                 </thead>
-                <tbody >
+                <tbody>
                     <tr *ngFor="let row of dataTable.rows">
-                        <td *ngFor="let data of row" >{{data}}</td>
-                        <td>
-                            <div class="row col-md-auto">
-                                <div *ngIf="editBool == true; then editBlock"></div>
-                                <ng-template #editBlock>
-                                    <app-icon type="edit" (click) = "editClick()"></app-icon>
-                                </ng-template>
+                        <td *ngFor="let data of row">{{data}}</td>
+                        <div *ngIf=" editBool == true || trashBool == true; then trashANDeditBlock"></div>
+                        <ng-template #trashANDeditBlock>
+                            <td>
+                                <div class="row col-md-auto">
+                                    <div *ngIf="editBool == true; then editBlock"></div>
+                                    <ng-template #editBlock>
+                                        <app-icon type="edit" (click)="editClick()"></app-icon>
+                                    </ng-template>
 
-                                <div class = "col-md-auto"></div>
+                                    <div class="col-md-auto"></div>
 
-                                <div *ngIf="trashBool == true;then trashBlock"></div>
-                                <ng-template #trashBlock>
-                                    <app-icon type="trash" (click) = "trashClick()"></app-icon>
-                                </ng-template>
-                                
-                            </div>
-                        </td>
+                                    <div *ngIf="trashBool == true;then trashBlock"></div>
+                                    <ng-template #trashBlock>
+                                        <app-icon type="trash" (click)="trashClick()"></app-icon>
+                                    </ng-template>
+
+                                </div>
+                            </td>
+                        </ng-template>
                     </tr>
                 </tbody>
             </table>
