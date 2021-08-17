@@ -1,8 +1,27 @@
-<h1>Product Release Mapping - New Param Mapping</h1>
-<div class="content">
-<!-- <app-product-selector labelText="Product Name:">
-</app-product-selector> -->
-<br><br>
-
-
-</div>
+<app-card cardTitle="New Param Mapping">
+    <h1 style="text-align: left">Product Release Mapping - New Param Mapping</h1>
+    <br><br>
+    <table>
+        <tr>
+            <td colspan="2">
+                <app-param-selector labelText="Param Name:" [paramList]="parameters"
+                    (onSelectionChanged)="updateValues($event)">
+                </app-param-selector>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                <app-numbine-table style="text-align: left;" [dataTable]="dataTable"> </app-numbine-table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <app-button name='Quit'></app-button>
+                <app-button style="text-align: center;" name='Save'></app-button>
+                <!--Routing-->
+            </td>
+        </tr>
+    </table>
+    <br><br>
+</app-card>

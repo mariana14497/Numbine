@@ -13,7 +13,15 @@ import { DataTable } from '../../models/DataTable';
 export class TestComponent implements OnInit {
   // Actions Example
   trash : Boolean = true;
-  edit : Boolean = true;
+  edit : Boolean = false;
+  
+  public trashClickTest(){
+    alert('test trash')
+  }
+
+  public editClickTest(){
+    alert('test edit')
+  }
 
   heloo(event: KeyboardEvent){
     this.helo =(event.target as HTMLInputElement).value ;

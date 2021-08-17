@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
-import { EventEmitter } from 'events';
+import { EventEmitter } from '@angular/core';
 import { Product } from 'src/app/demo/dell/models/Product'
 import { NumbineSelectBoxComponent } from '../../../general-components/numbine-select-box/numbine-select-box.component';
 import { SelectBoxItem } from '../../../models/SelectBoxItem';
@@ -48,6 +48,5 @@ export class ProductSelectorComponent implements OnInit, OnChanges {
   onSelectProduct(index: number) {
     this.selectedProduct = this.productList[index];
     this.onSelectionChanged.emit(this.selectedProduct);
-    console.log(this.selectedProduct);
   }
 }
