@@ -1,0 +1,30 @@
+<div>
+    <!-------------------------1------------------------------>
+    <div>
+           <p>select a product and version : </p>
+            <app-product-selector labelText="Product Name:" [productList]="products" (onSelectionChanged)="updateParams($event)">
+            </app-product-selector>
+      
+            <br>
+            <app-product-selector labelText="Product Name:" [productList]="products" (onSelectionChanged)="updateParams($event)">
+            </app-product-selector> <!--productVirsion-->
+
+    </div>
+    <div>
+        <p>the configuration options : </p>
+        <textarea> </textarea>
+    </div>
+    <div>
+        <!--download-->
+        <app-button name='New Param'></app-button>
+    </div>
+        <!-------------------------2------------------------------>
+
+    <div>
+
+        <p>fetch product & version confeg</p>
+        <app-button name='New Param'></app-button>
+    </div>
+        <!-------------------------3------------------------------>
+
+</div> 

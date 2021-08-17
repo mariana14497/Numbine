@@ -54,7 +54,9 @@ import { NumbineTableComponent } from './demo/dell/general-components/numbine-ta
 import { AppLoadingComponent } from './demo/dell/general-components/app-loading/app-loading.component';
 import { NumbineActionsTableComponent } from './demo/dell/general-components/numbine-actions-table/numbine-actions-table.component'
 import { ForgotPassComponent } from './demo/dell/generalScreens/log-in/forgot-pass/forgot-pass.component';
-import { ParamSelectorComponent } from './demo/dell/configurator/components/param-selector/param-selector.component'
+import { ParamSelectorComponent } from './demo/dell/configurator/components/param-selector/param-selector.component';
+import { UserConfigGeneratorPageComponent } from './demo/dell/tester/user-config-generator-page/user-config-generator-page.component';
+import { SelectTupleComponent } from './demo/dell/tester/select-tuple/select-tuple.component'
 @NgModule({
   declarations: [
     NewReleaseComponent,
@@ -104,7 +106,9 @@ import { ParamSelectorComponent } from './demo/dell/configurator/components/para
 
     NumbineActionsTableComponent,
       ForgotPassComponent,
-      ParamSelectorComponent
+      ParamSelectorComponent,
+      UserConfigGeneratorPageComponent,
+      SelectTupleComponent
   ],
   imports: [
     BrowserModule,
