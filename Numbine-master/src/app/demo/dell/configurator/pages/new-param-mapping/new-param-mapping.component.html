@@ -1,18 +1,20 @@
 <div class="content">
-    <h1 style="text-align: left">Product Release Mapping - New Param Mapping</h1>
-    <br><br>
-    <table style="width: 100%">
-        <tr>
-            <td colspan="2">
-                <app-param-selector labelText="Param Name:" [paramList]="parameters">
-                </app-param-selector>
-            </td>
-        </tr>
-        <br>
-        <tr>
-            <td>
-                <app-numbine-table style="text-align: left;" [dataTable] = "dataTable"> </app-numbine-table>
-            </td>
-        </tr>
-    </table>
-<br><br>
+    <app-card>
+        <h1 style="text-align: left">Product Release Mapping - New Param Mapping</h1>
+        <br><br>
+        <table style="width: 100%">
+            <tr>
+                <td colspan="2">
+                    <app-param-selector labelText="Param Name:" [paramList]="parameters">
+                    </app-param-selector>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    <app-numbine-table style="text-align: left;" [dataTable]="dataTable"> </app-numbine-table>
+                </td>
+            </tr>
+        </table>
+        <br><br>
+    </app-card>
