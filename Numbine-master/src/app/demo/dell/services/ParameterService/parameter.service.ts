@@ -78,7 +78,14 @@ export class ParameterService
   public getParametersAsync(): Observable<Parameter[]>
   {
     return this.httpClient.get<Parameter[]>(ParameterService.getPath + "Parameter/getAllParameters",);
-  }
+   }
+  // public deleteParameter(){
+
+  //   const deleteParamter=   ParameterService.getPath+"/deleteParam/deleteParam";
+  //   return this.httpClient.delete(deleteParamter);
+    
+  //   }
+    
 
 
 }

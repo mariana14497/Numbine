@@ -9,9 +9,11 @@ import { DataTable } from '../../../models/DataTable';
   styleUrls: ['./product-release-mapping.component.scss']
 })
 export class ProductReleaseMappingComponent implements OnInit {
+  trash : Boolean = true;
+  edit : Boolean = true;
   
-  title = ['Param Name(^v)','Actions'];
-  rows = [[1,'"<app-icon type="edit"></app-icon>"'],[3,'<app-icon type="edit"></app-icon>']];
+  title = ['Param Name(^v)'];
+  rows = [[1],[3]];
   dataTable = new DataTable();
   
   public products : Product[] = [];
@@ -31,5 +33,6 @@ export class ProductReleaseMappingComponent implements OnInit {
       alert("Error in loading products, product-release-mapping.component.ts");
     });
   }
-
+  
+  
 }

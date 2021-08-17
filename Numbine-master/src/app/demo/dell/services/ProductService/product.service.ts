@@ -36,4 +36,5 @@ export class ProductService {
   {
     return this.httpClient.get<Product[]>(ProductService.getPath + "Product/getAllProducts");
   }
+  
 }
