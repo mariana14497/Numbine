@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ParamService } from './param.service';
+import { ForgotPassService } from './forgot-pass.service';
 
-describe('ParamService', () => {
-  let service: ParamService;
+describe('ForgotPassService', () => {
+  let service: ForgotPassService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ParamService);
+    service = TestBed.inject(ForgotPassService);
   });
 
   it('should be created', () => {
