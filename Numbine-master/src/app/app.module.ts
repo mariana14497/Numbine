@@ -51,7 +51,8 @@ import { ReleasesComponent } from './demo/dell/configurator/pages/releases/relea
 import { NewReleaseComponent } from './demo/dell/configurator/pages/new-release/new-release.component';
 import { UpdateReleaseComponent } from './demo/dell/configurator/pages/update-release/update-release.component';
 import { NumbineTableComponent } from './demo/dell/general-components/numbine-table/numbine-table.component';
-import { AppLoadingComponent } from './demo/dell/general-components/app-loading/app-loading.component'
+import { AppLoadingComponent } from './demo/dell/general-components/app-loading/app-loading.component';
+import { NumbineActionsTableComponent } from './demo/dell/general-components/numbine-actions-table/numbine-actions-table.component'
 @NgModule({
   declarations: [
     NewReleaseComponent,
@@ -97,7 +98,9 @@ import { AppLoadingComponent } from './demo/dell/general-components/app-loading/
 
     LogInComponent,
 
-    AppLoadingComponent
+    AppLoadingComponent,
+
+    NumbineActionsTableComponent
   ],
   imports: [
     BrowserModule,

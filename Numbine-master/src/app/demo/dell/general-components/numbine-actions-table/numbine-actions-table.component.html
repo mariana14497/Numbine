@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="table-responsive">
+            <table dataTable class="table table-striped table-bordered nowrap table-hover">
+                <thead>
+                    <tr>
+                        <th *ngFor="let title of dataTable.titles">{{title}}</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr *ngFor="let row of dataTable.rows">
+                        <td *ngFor="let data of row" >{{data}}</td>
+                        <td>
+                            <div class="row col-md-auto">
+                                <div *ngIf="editBool == true; then editBlock"></div>
+                                <ng-template #editBlock>
+                                    <a routerLink="editRouterLink"><app-icon type="edit"></app-icon></a>                                </ng-template>
+
+                                <div class = "col-md-auto"></div>
+
+                                <div *ngIf="trashBool == true;then trashBlock"></div>
+                                <ng-template #trashBlock>
+                                    <a routerLink="trashRouterLink"><app-icon type="trash"></app-icon></a>
+                                </ng-template>
+                                
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

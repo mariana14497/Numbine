@@ -11,14 +11,17 @@ import { DataTable } from '../../models/DataTable';
   styleUrls: ['./test.component.scss']
 })
 export class TestComponent implements OnInit {
+  // Actions Example
+  trash : Boolean = true;
+  edit : Boolean = true;
 
-  title = ['aa','bb'];
-  rows = [[1,2],[3,4]];
-  dataTable = new DataTable();
   heloo(event: KeyboardEvent){
     this.helo =(event.target as HTMLInputElement).value ;
     
   }
+  title = ['Param Name(^v)'];
+  rows = [[1,],[3]];
+  dataTable = new DataTable();
   // charts
   public numbineChartData: any;
   // other
