@@ -14,11 +14,11 @@ export class NumbineActionsTableComponent implements OnInit {
   @Input()
   trashBool : Boolean = true;
   @Input()
-  trashRouterLink : ActivatedRoute;
+  trashClick : Function;
   @Input()
   editBool: Boolean = true;
   @Input()
-  editRouterLink : ActivatedRoute;
+  editClick : Function;
   
   constructor() {
     

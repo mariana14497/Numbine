@@ -15,13 +15,14 @@
                             <div class="row col-md-auto">
                                 <div *ngIf="editBool == true; then editBlock"></div>
                                 <ng-template #editBlock>
-                                    <a routerLink="editRouterLink"><app-icon type="edit"></app-icon></a>                                </ng-template>
+                                    <app-icon type="edit" (click) = "editClick()"></app-icon>
+                                </ng-template>
 
                                 <div class = "col-md-auto"></div>
 
                                 <div *ngIf="trashBool == true;then trashBlock"></div>
                                 <ng-template #trashBlock>
-                                    <a routerLink="trashRouterLink"><app-icon type="trash"></app-icon></a>
+                                    <app-icon type="trash" (click) = "trashClick()"></app-icon>
                                 </ng-template>
                                 
                             </div>

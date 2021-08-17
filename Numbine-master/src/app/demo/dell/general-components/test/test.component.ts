@@ -14,6 +14,14 @@ export class TestComponent implements OnInit {
   // Actions Example
   trash : Boolean = true;
   edit : Boolean = true;
+  
+  public trashClickTest(){
+    alert('test trash')
+  }
+
+  public editClickTest(){
+    alert('test edit')
+  }
 
   heloo(event: KeyboardEvent){
     this.helo =(event.target as HTMLInputElement).value ;
