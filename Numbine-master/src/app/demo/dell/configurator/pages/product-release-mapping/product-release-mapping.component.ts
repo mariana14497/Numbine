@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/demo/dell/models/Product'
+import { Parameter } from 'src/app/demo/dell/models/Parameter'
 import { ProductService } from 'src/app/demo/dell/services/ProductService/product.service';
+import { ParameterService } from 'src/app/demo/dell/services/ParameterService/parameter.service';
 import { DataTable } from '../../../models/DataTable';
 
 @Component({
@@ -9,21 +11,23 @@ import { DataTable } from '../../../models/DataTable';
   styleUrls: ['./product-release-mapping.component.scss']
 })
 export class ProductReleaseMappingComponent implements OnInit {
+  trash : Boolean = true;
+  edit : Boolean = true;
   
-  title = ['Param Name(^v)','Actions'];
-  rows = [[1,'"<app-icon type="edit"></app-icon>"'],[3,'<app-icon type="edit"></app-icon>']];
+  title = ['Param Name(^v)'];
+  rows = [[1],[3]];
   dataTable = new DataTable();
   
   public products : Product[] = [];
-
-  constructor(private productService : ProductService) { }
+  public params : Parameter[] = [];
+  constructor(private productService : ProductService, private paramService : ParameterService) { }
 
   ngOnInit(): void {
     this.dataTable.rows=this.rows;
     this.dataTable.titles=this.title;
     
-    let obs = this.productService.getDummyProducts();
-    obs.subscribe(products => {
+    let obsProducts = this.productService.getDummyProducts();
+    obsProducts.subscribe(products => {
       this.products = products;
       // Add loading?
     }, error =>
@@ -31,5 +35,24 @@ export class ProductReleaseMappingComponent implements OnInit {
       alert("Error in loading products, product-release-mapping.component.ts");
     });
   }
+  
+  
+
+  updateParams(currentProduct : Product)
+  {
+    if(currentProduct != null)
+    {
+      let obsParams = this.paramService.getDummyParamsById(currentProduct.id);
+      obsParams.subscribe(params => {
+        this.params = params;
+        console.log(this.params);
+        // Add loading?
+      }, error =>
+      {
+        alert("Error in loading params, product-release-mapping.component.ts");
+      });
+    }
+  }
+
 
 }

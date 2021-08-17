@@ -1,10 +1,12 @@
-<div class="content">
+
+    <div class="content" >
+        <app-card >
     <h1 style="text-align: left">Product Release Mapping</h1>
     <br><br>
     <table style="width: 100%">
         <tr>
             <td colspan="2">
-                <app-product-selector labelText="Product Name:" [productList]="products">
+                <app-product-selector labelText="Product Name:" [productList]="products" (onSelectionChanged)="updateParams($event)">
                 </app-product-selector>
             </td>
         </tr>
@@ -16,12 +18,13 @@
         <br>
         <tr>
             <td>
-                <app-numbine-table style="text-align: left;" [dataTable] = "dataTable"> </app-numbine-table>
+                <app-numbine-actions-table [dataTable] = "dataTable" [trashBool]="trash" [editBool] = "edit"></app-numbine-actions-table>
             </td>
         </tr>
     </table>
 <br><br>
 
-
+</app-card>
 </div>
+
 
